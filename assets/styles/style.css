@@ -1,0 +1,209 @@
+@import "lib/vars.css";
+@import "lib/mixins.css";
+@import "lib/fontface.css";
+@import "lib/font-awesome.css";
+
+
+* {
+  //border: 1px solid tomato;
+}
+
+html,
+body {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #333;
+  background-color: #fff;
+  min-height: 100vh;
+  font-family: $font_family_base;
+}
+
+.todo_app{
+  @apply bg-cyan-500;
+  @apply px-4 xl:px-32;
+   
+
+   .header{
+       @apply  pt-10;
+
+       .header_holder{
+           @apply flex flex-col items-center md:flex-row;
+           
+
+           .user_pic{
+               @apply flex items-center md:mr-12;
+
+               img{
+                   
+               }
+           }
+
+           
+           .text{
+               @apply flex flex-col items-center mt-6 md:items-start;
+               h2{
+                   @apply text-2xl text-white;
+               }
+               h1{
+                   @apply text-4xl font-bold text-white;
+               }
+           }
+       }
+       .percetage{
+           @apply my-10 px-11;
+           
+           .text_holder{
+               @apply flex items-center justify-between;
+
+               .text{
+                   
+                   p{
+                       @apply text-white;
+                   }
+               }
+               .number{
+                   @apply text-white;
+                   .amount_done{
+                       @apply text-white text-2xl font-bold;
+                   }
+                   .amount_total{
+                       @apply text-white text-2xl font-bold;
+                   }
+                   
+               }
+           }
+           
+
+           .progress_bar{
+               @apply relative h-2;
+               
+               .progress_bar_background{
+                   @apply absolute top-0 left-0 h-full w-full bg-slate-300 rounded-2xl;
+               }
+               .progress_bar_completed{
+                   @apply absolute top-0 left-0 h-full  bg-white rounded-2xl transition-all;
+
+               }
+           }
+       }
+      
+   }
+   .main{
+       @apply bg-gray-100 rounded-tl-2xl rounded-tr-2xl;
+       .header_list{
+           @apply mb-4;
+           h1{
+               @apply text-lg font-bold;
+           }
+       }
+   }
+
+
+}
+.modal_window{
+   @apply bg-black bg-opacity-50;
+   @apply flex justify-center items-center;
+   @apply fixed top-0 left-0 w-full h-full z-30;
+   
+   
+
+   
+
+   .modal_window_holder{
+       @apply bg-white opacity-100;
+       @apply  max-w-xl rounded-lg py-2 px-3 xl:w-2/6 ;
+
+       form{
+           
+           .new_task{
+               @apply flex items-center justify-between;
+               h2{
+                   @apply font-bold;
+               }
+               button{
+                   @apply flex;
+               }
+           }
+           .form_control{
+               @apply justify-center;
+               
+               input{
+                   @apply w-full my-8 border-b-stone-400 border-b;
+               }
+               
+           }
+           .create{
+               @apply flex justify-center;
+               
+               button{
+                   @apply flex justify-center px-4 py-1 rounded-full bg-cyan-500 font-semibold text-sm text-white;
+               }
+           }
+           
+       }
+   
+   }
+}
+
+.new_button{
+   @apply fixed bottom-4 right-4;
+   @apply p-1 px-2 flex items-center bg-white rounded-full;
+   @apply invisible xl:visible;
+
+   i{
+       @apply text-cyan-500 flex mr-2 font-semibold;
+   }
+   span{
+       @apply text-cyan-500 flex font-semibold text-sm;
+   }
+}
+.new_button_icon{
+   @apply fixed bottom-4 right-4;
+   @apply bg-cyan-500 text-white visible xl:invisible;
+   @apply flex rounded-full p-3;
+}
+
+
+
+.todo_list{
+   @apply py-8 px-11 ;
+}
+.todo_list_item{
+   @apply bg-white mb-2 rounded-3xl p-3 flex items-center justify-between;
+
+   .todo_list_description{
+       @apply w-full;
+       .todo_list_title{
+           @apply font-bold;
+       }
+       .todo_list_task_description{}
+   }
+   .ctas{
+       @apply flex items-center;
+
+       .complete_buttons{
+           @apply flex;
+           .mark_uncompleted{
+               
+               i{
+                   @apply flex text-cyan-500 hover:text-cyan-400 transition-colors;
+               }
+           }
+           .mark_completed{
+              @apply ml-2;
+
+               i{
+                   @apply flex text-cyan-500 hover:text-cyan-400 transition-colors;
+               }
+           }
+           
+       }
+       .close_button{
+           @apply ml-2;
+
+           i{
+               @apply flex text-amber-600 hover:text-orange-400 transition-colors;
+           }
+       }
+   }
+}

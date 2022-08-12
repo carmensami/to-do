@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link rel="stylesheet" href="/assets/styles/lib/font-awesome.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>to do app</title>
+  </head>
+  <body>
+    <div class="todo_app">
+
+      <!--header-->
+      <header class="header">
+        <!--header holder-->
+        <div class="header_holder">
+
+          <div class="user_pic">
+            <img src="/assets/images/johanna.png" alt="user pic">
+          </div>
+          
+          <div class="text">
+            <h2>Hola</h2>
+            <h1>Johanna!</h1>
+          </div>
+
+        </div>
+        <!--/header holder-->
+
+        <!--to do count-->
+        <div class="percetage">
+          <div class="text_holder">
+            <div class="text">
+              <p>tareas completadas</p>
+            </div>
+            <p class="number">
+  
+              <span class="amount_done">6</span> de
+              <span class="amount_total">10</span> 
+  
+            </p>
+          </div>
+           
+
+          <div class="progress_bar">
+            <div class="progress_bar_background"></div>
+            <div class="progress_bar_completed" style="width: 50%;"></div>
+          </div>
+
+          
+        </div>
+        <!--/to do count-->
+      
+      </header>
+      <!--/header-->
+
+      <!--main-->
+      <main class="main">
+        <!--todo_list-->
+        <section class="todo_list">
+          <div class="header_list">
+            <h1>Listado de tareas</h1>
+          </div>
+
+          <!--cada item-->
+          <article class="todo_list_item">
+            <div class="todo_list_description">
+              <h2 class="todo_list_title">
+                To do list item
+              </h2>
+              <div class="todo_list_task_description">
+                Descripción de la tarea
+              </div>
+            </div>
+            <div class="ctas">
+              <div class="complete_buttons">              
+                <button class="mark_uncompleted">
+                  <i class="ph-check-square"></i>
+                </button>
+
+                <button class="mark_completed hidden">
+                  <i class="ph-check-square-fill"></i>
+                </button>
+
+              <button class="close_button">
+                <i class="ph-x-square-fill"></i>
+              </button>
+              </div>  
+            </div>
+          </article>
+          <!--/cada item-->
+        
+        </section>
+        <!--todo_list-->
+      </main>
+      <!--/main-->
+
+      <!--modal window-->
+      <div class="modal_window invisible">
+        <div class="modal_window_holder">
+          <form>
+            <div class="new_task">
+              <h2>Nueva tarea</h2>
+              <button type="reset">
+                <i class="ph-x-fill"></i>
+              </button>
+            </div>
+
+            <div class="form_control">
+
+              <input type="text" placeholder="Escribe aquí">
+              
+            </div>  
+            <div class="create">
+              <button type="submit">crear</button>
+            </div>
+            
+          </form>
+            
+        </div>
+      </div>
+      <!--/modal window-->
+
+      <!--new button-->
+      <button class="new_button">
+        <i class="ph-plus"></i>
+        <span>Add New</span>
+      </button>
+
+      <button class="new_button_icon">
+        <i class="ph-plus"></i>
+        
+      </button>
+      <!--new button-->
+    </div>
+    <script type="module" src="/app/main.js"></script>
+  </body>
+</html>
